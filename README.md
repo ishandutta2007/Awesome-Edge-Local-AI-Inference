@@ -27,6 +27,8 @@
 - [💻 Open-Source GitHub Projects](#-open-source-github-projects)
 - [⚙️ Hardware & Acceleration Compatibility](#️-hardware--acceleration-compatibility)
 - [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support](#-support)
+- [Star History](#star-history)
 - [⚠️ Disclaimer](#️-disclaimer)
 
 ---
@@ -159,6 +161,24 @@ Contributions are warmly welcome to keep this ecosystem directory current and ex
 5. 🚀 **Submit a Pull Request** with a concise description of why the tool is valuable for edge/local AI inference.
 
 ⭐ **Star the repo** if you find it helpful for your edge AI workflow!
+
+---
+
+## 💖 Support
+
+A heartfelt thank you to everyone exploring, evaluating, and contributing to the open-source and edge AI ecosystem! 🙏
+
+If you found this curated list helpful for building sovereign, offline, or low-latency AI architectures:
+- ⭐ **Star this repository** to help other builders discover it
+- 🍴 **Fork and contribute** your favorite local inference tools and benchmarks
+- 📢 **Share** with fellow engineers, researchers, and developers in your community
+- ☕ **Buy me a coffee / Sponsor**: If you'd like to support ongoing maintenance and curation of open AI projects, consider sponsoring via the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007)!
+
+---
+
+##  Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Edge-Local-AI-Inference&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Edge-Local-AI-Inference&type=date&legend=top-left)
 
 ---
 
