@@ -55,79 +55,71 @@ The global Edge AI inference market is estimated at **$20.8 billion in 2024** an
 
 ## Open-Source GitHub Projects
 
+- **[Ollama](https://github.com/ollama/ollama)** [![Stars](https://img.shields.io/github/stars/ollama/ollama?style=social&color=white)](https://github.com/ollama/ollama/stargazers)  
+  The de facto standard for running local LLMs with minimal friction. Features one-line model pull, automatic quantization, and GPU acceleration. Exposes an OpenAI-compatible API at `localhost:11434` with cross-platform support across macOS, Linux, and Windows.
 
+- **[Open WebUI](https://github.com/open-webui/open-webui)** [![Stars](https://img.shields.io/github/stars/open-webui/open-webui?style=social&color=white)](https://github.com/open-webui/open-webui/stargazers)  
+  Extensible, feature-rich, and self-hosted AI interface designed to operate entirely offline. Offers first-class native integration with Ollama and OpenAI-compatible local APIs, multi-model chat, local RAG pipelines, and granular user role management.
 
-- **[llama.cpp](https://github.com/ggml-org/llama.cpp)**  
+- **[llama.cpp](https://github.com/ggml-org/llama.cpp)** [![Stars](https://img.shields.io/github/stars/ggml-org/llama.cpp?style=social&color=white)](https://github.com/ggml-org/llama.cpp/stargazers)  
+  The foundational pure C/C++ inference engine for LLaMA, Mistral, Gemma, and hundreds of other architectures. Serves as the high-performance backbone powering Ollama, LM Studio, and Jan. Supports CUDA, Apple Metal, Vulkan, SYCL, and extreme GGUF quantization.
 
-  The foundational C/C++ inference engine for LLaMA-family models. Powers most local LLM tools (Ollama, LM Studio, Jan) under the hood. Supports CPU, GPU (CUDA, Metal, Vulkan), and exotic architectures via GGUF quantization. 96k+ stars .
+- **[vLLM](https://github.com/vllm-project/vllm)** [![Stars](https://img.shields.io/github/stars/vllm-project/vllm?style=social&color=white)](https://github.com/vllm-project/vllm/stargazers)  
+  High-throughput, memory-efficient LLM serving engine featuring PagedAttention algorithm. The gold standard for self-hosting high-concurrency local inference on private enterprise servers and edge workstations with continuous batching.
 
+- **[GPT4All](https://github.com/nomic-ai/gpt4all)** [![Stars](https://img.shields.io/github/stars/nomic-ai/gpt4all?style=social&color=white)](https://github.com/nomic-ai/gpt4all/stargazers)  
+  Privacy-first desktop ecosystem from Nomic AI. Delivers one-click model downloads, built-in LocalDocs for private RAG over local documents, and a turnkey chat UI without any telemetry or GPU requirements.
 
+- **[LiteLLM](https://github.com/BerriAI/litellm)** [![Stars](https://img.shields.io/github/stars/BerriAI/litellm?style=social&color=white)](https://github.com/BerriAI/litellm/stargazers)  
+  Lightweight proxy gateway to call 100+ LLMs using the standardized OpenAI input/output format. Seamlessly routes requests across local backends (Ollama, vLLM, LocalAI) and cloud providers with built-in fallbacks, rate limiting, and spend tracking.
 
-- **[Ollama](https://github.com/ollama/ollama)**  
+- **[Whisper.cpp](https://github.com/ggml-org/whisper.cpp)** [![Stars](https://img.shields.io/github/stars/ggml-org/whisper.cpp?style=social&color=white)](https://github.com/ggml-org/whisper.cpp/stargazers)  
+  High-performance C/C++ port of OpenAI's Whisper automatic speech recognition model. Provides zero-memory-allocation, CPU/GPU accelerated on-device transcription for desktops, mobile devices, and embedded hardware.
 
-  The de facto standard for running local LLMs with minimal friction. One-line install, one-line model pull, automatic quantization and GPU acceleration. Exposes OpenAI-compatible API at `localhost:11434`. Cross-platform on macOS, Linux, and Windows . Best for developers and terminal-comfortable users.
+- **[LocalAI](https://github.com/mudler/LocalAI)** [![Stars](https://img.shields.io/github/stars/mudler/LocalAI?style=social&color=white)](https://github.com/mudler/LocalAI/stargazers)  
+  Drop-in OpenAI API replacement for self-hosted community AI. Supports text generation, Stable Diffusion image synthesis, whisper audio transcription, text-to-speech, and vector embeddings through a unified REST container.
 
+- **[Exo](https://github.com/exo-explore/exo)** [![Stars](https://img.shields.io/github/stars/exo-explore/exo?style=social&color=white)](https://github.com/exo-explore/exo/stargazers)  
+  Decentralized distributed AI inference framework that clusters everyday consumer devices (MacBooks, Mac Minis, PCs) into an elastic compute mesh. Leverages peer-to-peer discovery and tensor parallelism to run frontier 70B–405B models locally.
 
+- **[text-generation-webui](https://github.com/oobabooga/text-generation-webui)** [![Stars](https://img.shields.io/github/stars/oobabooga/text-generation-webui?style=social&color=white)](https://github.com/oobabooga/text-generation-webui/stargazers)  
+  The Swiss Army knife Gradio interface for running large language models locally. Supports multiple backends including transformers, llama.cpp, ExLlamaV2, AutoGPTQ, and TensorRT-LLM with extension support for LoRA training and character cards.
 
-- **[LocalAI](https://github.com/mudler/LocalAI)**  
+- **[SGLang](https://github.com/sgl-project/sglang)** [![Stars](https://img.shields.io/github/stars/sgl-project/sglang?style=social&color=white)](https://github.com/sgl-project/sglang/stargazers)  
+  Fast serving framework designed for complex LLM programs and structured generation. Integrates RadixAttention for automatic KV cache reuse across multi-turn chats, few-shot prompting, and reasoning agent workflows.
 
-  Drop-in OpenAI API replacement for self-hosted inference. Supports text generation, image generation (Stable Diffusion), text-to-speech, speech-to-text, and embeddings through a unified OpenAI-compatible API. Docker-friendly and ideal for backend services .
+- **[MediaPipe Framework](https://github.com/google-ai-edge/mediapipe)** [![Stars](https://img.shields.io/github/stars/google-ai-edge/mediapipe?style=social&color=white)](https://github.com/google-ai-edge/mediapipe/stargazers)  
+  Google's cross-platform on-device machine learning framework with graph-based computation pipelines. Provides production-ready models for real-time 3D hand tracking, face mesh, body pose estimation, and mobile object detection.
 
+- **[MLX](https://github.com/ml-explore/mlx)** [![Stars](https://img.shields.io/github/stars/ml-explore/mlx?style=social&color=white)](https://github.com/ml-explore/mlx/stargazers)  
+  Array framework designed specifically for machine learning on Apple Silicon, engineered by Apple machine learning research. Features unified memory access, lazy computation, and multi-device capabilities for high-speed local inference.
 
+- **[llamafile](https://github.com/mozilla-ai/llamafile)** [![Stars](https://img.shields.io/github/stars/mozilla-ai/llamafile?style=social&color=white)](https://github.com/mozilla-ai/llamafile/stargazers)  
+  Mozilla's open-source initiative that turns LLM weights into single multi-OS executable binaries. Runs on six operating systems (macOS, Windows, Linux, FreeBSD, NetBSD, OpenBSD) without installation or external runtimes.
 
-- **[GPT4All](https://github.com/nomic-ai/gpt4all)**  
+- **[MLC LLM](https://github.com/mlc-ai/mlc-llm)** [![Stars](https://img.shields.io/github/stars/mlc-ai/mlc-llm?style=social&color=white)](https://github.com/mlc-ai/mlc-llm/stargazers)  
+  Universal deployment engine powered by machine learning compiler technology (Apache TVM Unity). Executes cross-platform native LLMs on iOS, Android, WebGPU in-browser, Windows, Linux, and macOS with unified Vulkan and Metal acceleration.
 
-  Beginner-friendly desktop application from Nomic AI. One-click model downloads, built-in LocalDocs for private RAG over your own files, and a clean chat UI. Particularly popular on Windows. Best for non-technical users who want private AI with document Q&A .
+- **[ONNX Runtime](https://github.com/microsoft/onnxruntime)** [![Stars](https://img.shields.io/github/stars/microsoft/onnxruntime?style=social&color=white)](https://github.com/microsoft/onnxruntime/stargazers)  
+  Cross-platform, high-performance scoring engine for Open Neural Network Exchange models by Microsoft. Accelerates inference across diverse hardware execution providers including DirectML, OpenVINO, CUDA, TensorRT, and CoreML.
 
+- **[Candle](https://github.com/huggingface/candle)** [![Stars](https://img.shields.io/github/stars/huggingface/candle?style=social&color=white)](https://github.com/huggingface/candle/stargazers)  
+  Minimalist, lightweight ML framework for Rust built by Hugging Face. Focuses on performance, memory footprint minimization, and zero-overhead deployments on resource-limited IoT and WASM edge environments.
 
+- **[Apache TVM](https://github.com/apache/tvm)** [![Stars](https://img.shields.io/github/stars/apache/tvm?style=social&color=white)](https://github.com/apache/tvm/stargazers)  
+  End-to-end open-source machine learning compiler framework for CPUs, GPUs, and specialized edge accelerators. Compiles deep learning models into ultra-efficient bare-metal machine code.
 
-- **[Exo](https://github.com/exo-explore/exo)**  
+- **[OpenVINO](https://github.com/openvinotoolkit/openvino)** [![Stars](https://img.shields.io/github/stars/openvinotoolkit/openvino?style=social&color=white)](https://github.com/openvinotoolkit/openvino/stargazers)  
+  Intel's open-source toolkit for optimizing and deploying deep learning models on Intel CPUs, integrated GPUs, discrete GPUs, and specialized NPUs with zero cloud latency.
 
-  Open-source distributed AI inference framework that connects your devices (Mac Studio, Mac mini, MacBook) into a local cluster. Supports tensor parallelism via MLX backend, automatic device discovery, and RDMA over Thunderbolt 5 for near-zero latency. Can run 235B+ parameter models across 4 Mac Studios .
+- **[ExecuTorch](https://github.com/pytorch/executorch)** [![Stars](https://img.shields.io/github/stars/pytorch/executorch?style=social&color=white)](https://github.com/pytorch/executorch/stargazers)  
+  PyTorch's official end-to-end on-device inference runtime for mobile and edge devices. Delivers a compact footprint, modular execution backends, and hardware acceleration for iOS, Android, and embedded Linux.
 
+- **[ExLlamaV2](https://github.com/turboderp-org/exllamav2)** [![Stars](https://img.shields.io/github/stars/turboderp-org/exllamav2?style=social&color=white)](https://github.com/turboderp-org/exllamav2/stargazers)  
+  Fastest local inference library for consumer NVIDIA GPUs, designed from scratch to maximize throughput with custom EXL2 quantization, speculative decoding, and low VRAM footprint.
 
-
-- **[MLC LLM](https://github.com/mlc-ai/mlc-llm)**  
-
-  Universal LLM deployment engine powered by ML compilation. Runs models natively on iOS, Android, Web (WebGPU/WASM), Windows, Linux, and macOS across NVIDIA, AMD, Apple, and Intel GPUs. Provides OpenAI-compatible API via MLCEngine. 22k+ stars .
-
-
-
-- **[ExecuTorch](https://github.com/pytorch/executorch)**  
-
-  PyTorch's official on-device inference framework for mobile and edge AI. Optimized backends for iOS, Android, and embedded systems. Designed for deploying PyTorch models to resource-constrained devices .
-
-
-
-- **[TensorFlow Lite Micro](https://github.com/tensorflow/tflite-micro)**  
-
-  TensorFlow Lite for microcontrollers—ML inference on devices with kilobytes of memory. The standard for TinyML on Arduino, ESP32, and other MCUs .
-
-
-
-- **[Whisper.cpp](https://github.com/ggml-org/whisper.cpp)**  
-
-  Port of OpenAI's Whisper speech recognition model to C/C++ for CPU-only and embedded inference. Companion to llama.cpp from the same ggml ecosystem. 47k+ stars .
-
-
-
-- **[MediaPipe Framework](https://github.com/google/mediapipe)**  
-
-  Google's cross-platform on-device ML framework with graph-based computation (Packets, Graphs, Calculators). Provides pre-built Solutions/Tasks for hand landmarks (21 points), pose (33 points), face mesh, and object detection. Apache 2.0 licensed .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **TinyLlama** — 1.1B parameter model pre-trained on 3 trillion tokens, explicitly designed for edge and resource-constrained deployment .
-
-- **text-generation-webui** — Popular open-source web UI for running LLMs locally with support for multiple backends (llama.cpp, Transformers, ExLlama) .
-
-- **vLLM** — High-throughput serving engine optimized for concurrent requests. Overkill for single-user local use but essential for serving models to teams on local infrastructure .
-
-- **Frameworks for building custom systems**: Combine **llama.cpp** as the inference core with **Ollama** for API management, **LocalAI** for multi-modal endpoints, and **Exo** for distributed multi-device setups. For edge vision tasks, pair **MediaPipe** with **ExecuTorch** for mobile deployment.
+- **[TensorFlow Lite Micro](https://github.com/tensorflow/tflite-micro)** [![Stars](https://img.shields.io/github/stars/tensorflow/tflite-micro?style=social&color=white)](https://github.com/tensorflow/tflite-micro/stargazers)  
+  Lightweight runtime tailored for TinyML inference on microcontrollers, DSPs, and embedded microprocessors with as little as a few tens of kilobytes of memory (ARM Cortex-M, ESP32, Arduino).
 
 
 
