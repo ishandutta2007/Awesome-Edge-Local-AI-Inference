@@ -30,15 +30,15 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
 - [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
 - [Open-Source GitHub Projects](#open-source-github-projects)
-
 - [How to Contribute](#how-to-contribute)
-
 - [Disclaimer](#disclaimer)
 
+## Sector Overview & Market Dynamics
 
+The global Edge AI inference market is estimated at **$20.8 billion in 2024** and is projected to surpass **$100 billion by 2030** (growing at a ~26% CAGR), accelerated by escalating cloud inference costs, strict data sovereignty regulations, and ultra-low-latency on-device demands. The ecosystem exhibits a split structure: the underlying silicon and NPU layer is **highly concentrated** among major semiconductor leaders (NVIDIA, Qualcomm, Apple, AMD), whereas the software runtime, edge orchestration, and desktop inference tooling layer remains **moderately-to-highly fragmented** across diverse open engines, local frameworks, and cross-platform runtimes rather than a winner-take-all monopoly.
 
 ## SaaS/Hosted Platforms
 
