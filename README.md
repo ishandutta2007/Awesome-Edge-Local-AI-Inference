@@ -1,44 +1,51 @@
 # Awesome-Edge-Local-AI-Inference
 
-## Top Edge & Local AI Inference Ecosystem
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ishandutta2007/Awesome-Edge-Local-AI-Inference/pulls)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/ishandutta2007/Awesome-Edge-Local-AI-Inference)
+[![GitHub Stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-Edge-Local-AI-Inference?style=flat-square&logo=github)](https://github.com/ishandutta2007/Awesome-Edge-Local-AI-Inference/stargazers)
 
+> **A curated, comprehensive catalog of enterprise SaaS solutions, hosted platforms, open-source runtimes, and TinyML frameworks for on-device and local AI inference.** Run cutting-edge Large Language Models (LLMs), multimodal vision networks, and speech models offline on consumer GPUs, Apple Silicon, embedded NPUs, and edge gateways—guaranteeing data sovereignty, zero API latency, and predictable compute costs.
 
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on On-Device LLM Runtimes, Local API Servers & Edge ML Deployment*  
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Edge & Local AI Inference**. These tools enable running machine learning models—especially large language models—directly on consumer hardware, edge devices, and private infrastructure, eliminating cloud dependency for privacy, latency, and cost reasons.
-
-
-
-**Examples** include Ollama, LM Studio, Jan.ai, LocalAI, GPT4All, llama.cpp, Exo, MLC LLM, Edge Impulse, and MediaPipe (the category leaders).
-
-
-
-**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, custom model deployment, and transparent edge inference—ideal for developers, privacy-conscious users, and organizations building sovereign AI infrastructure. The open-source edge AI landscape spans universal LLM runtimes (llama.cpp, MLC LLM), distributed inference frameworks (Exo), and specialized edge ML platforms (MediaPipe, ExecuTorch, TensorFlow Lite Micro).
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
+---
 
 ## Table of Contents
 
 - [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [Edge AI Taxonomy & Architectural Matrix](#edge-ai-taxonomy--architectural-matrix)
 - [SaaS/Hosted Platforms](#saas-hosted-platforms)
 - [Open-Source GitHub Projects](#open-source-github-projects)
+  - [Universal LLM Inference Engines](#universal-llm-inference-engines)
+  - [Desktop GUI & Turnkey Workstations](#desktop-gui--turnkey-workstations)
+  - [High-Throughput Enterprise API Serving](#high-throughput-enterprise-api-serving)
+  - [Distributed & Mesh Device Inference](#distributed--mesh-device-inference)
+  - [Mobile, NPU & Embedded TinyML Runtimes](#mobile-npu--embedded-tinyml-runtimes)
+  - [Hardware Compilers & Acceleration Toolkits](#hardware-compilers--acceleration-toolkits)
+- [Hardware & Acceleration Compatibility](#hardware--acceleration-compatibility)
 - [How to Contribute](#how-to-contribute)
 - [Disclaimer](#disclaimer)
 
+---
+
 ## Sector Overview & Market Dynamics
 
-The global Edge AI inference market is estimated at **$20.8 billion in 2024** and is projected to surpass **$100 billion by 2030** (growing at a ~26% CAGR), accelerated by escalating cloud inference costs, strict data sovereignty regulations, and ultra-low-latency on-device demands. The ecosystem exhibits a split structure: the underlying silicon and NPU layer is **highly concentrated** among major semiconductor leaders (NVIDIA, Qualcomm, Apple, AMD), whereas the software runtime, edge orchestration, and desktop inference tooling layer remains **moderately-to-highly fragmented** across diverse open engines, local frameworks, and cross-platform runtimes rather than a winner-take-all monopoly.
+The global Edge AI inference market is estimated at **$20.8 billion in 2024** and is projected to surpass **$100 billion by 2030** (growing at a ~26% CAGR), accelerated by escalating cloud inference costs, strict data sovereignty regulations (GDPR, HIPAA, AI Act), and ultra-low-latency on-device demands. The ecosystem exhibits a split structure: the underlying silicon and NPU layer is **highly concentrated** among major semiconductor leaders (NVIDIA, Qualcomm, Apple, AMD, Intel), whereas the software runtime, edge orchestration, and desktop inference tooling layer remains **moderately-to-highly fragmented** across diverse open engines, local frameworks, and cross-platform runtimes rather than a winner-take-all monopoly.
+
+---
+
+## Edge AI Taxonomy & Architectural Matrix
+
+To help developers and enterprise architects choose the optimal edge runtime, tools are organized across four core architectural deployment paradigms:
+
+| Architectural Tier | Primary Target Hardware | Representative Tools | Primary Use Case |
+| :--- | :--- | :--- | :--- |
+| **Turnkey Desktop Clients** | macOS, Windows, Linux workstations | Ollama, LM Studio, Jan, GPT4All | Private developer copilot, offline research, local RAG document Q&A |
+| **High-Throughput Local Servers** | On-prem GPU nodes, edge servers | vLLM, SGLang, LocalAI, LiteLLM | Multi-tenant team API serving, production microservices, OpenAI drop-in replacement |
+| **Distributed / Peer Mesh** | Mixed Apple Silicon, consumer PCs | Exo | Running giant 70B–405B parameter models partitioned across local LAN devices |
+| **Embedded & Mobile TinyML** | Microcontrollers, iOS/Android, NPUs | ExecuTorch, MediaPipe, TF Lite Micro, Candle | On-device computer vision, real-time sensor processing, edge audio transcription |
+
+---
 
 ## SaaS/Hosted Platforms
 
@@ -122,6 +129,19 @@ The global Edge AI inference market is estimated at **$20.8 billion in 2024** an
   Lightweight runtime tailored for TinyML inference on microcontrollers, DSPs, and embedded microprocessors with as little as a few tens of kilobytes of memory (ARM Cortex-M, ESP32, Arduino).
 
 
+
+## Hardware & Acceleration Compatibility
+
+| Hardware Ecosystem | Supported Acceleration APIs | Recommended Runtime Stack | Typical Latency / Throughput Profile |
+| :--- | :--- | :--- | :--- |
+| **NVIDIA RTX / Workstation GPUs** | CUDA, TensorRT, FlashAttention-2/3 | vLLM, SGLang, ExLlamaV2, llama.cpp | Maximum tokens/sec, full precision & EXL2/AWQ quantization |
+| **Apple Silicon (M1/M2/M3/M4)** | Metal, Accelerate, MLX | llama.cpp (Metal), MLX, Exo | Exceptional memory bandwidth, zero unified memory copy overhead |
+| **AMD Radeon / Instinct GPUs** | ROCm, Vulkan, DirectML | llama.cpp, MLC LLM, vLLM (ROCm) | High compute density, open compute runtime |
+| **Intel Core / ARC / Xeon / NPU** | OpenVINO, SYCL, oneAPI | OpenVINO, llama.cpp (SYCL), ONNX Runtime | Optimized on-chip NPU and integrated Iris Xe/Arc GPU offloading |
+| **Qualcomm Snapdragon / Hexagon NPU** | QNN, ONNX, MediaPipe | Qualcomm AI Hub, ExecuTorch, MediaPipe | Ultra-low power mobile AI, on-device vision and speech |
+| **ARM Cortex-M & Embedded MCUs** | CMSIS-NN, Ethos-U | TensorFlow Lite Micro, Edge Impulse | Kilobyte-memory footprint, sub-milliwatt real-time inference |
+
+---
 
 ## How to Contribute
 
