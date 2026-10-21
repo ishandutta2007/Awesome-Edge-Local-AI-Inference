@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a13" />
+      <stop offset="50%" stop-color="#0d1527" />
+      <stop offset="100%" stop-color="#060911" />
+    </linearGradient>
+
+    <!-- Animated Glow Gradients -->
+    <linearGradient id="primaryGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8">
+        <animate attributeName="stop-color" values="#38bdf8;#818cf8;#c084fc;#38bdf8" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.8">
+        <animate attributeName="stop-color" values="#a855f7;#38bdf8;#34d399;#a855f7" dur="8s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <radialGradient id="radialCyan" cx="20%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25">
+        <animate attributeName="stop-opacity" values="0.15;0.35;0.15" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="radialPurple" cx="80%" cy="70%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.25">
+        <animate attributeName="stop-opacity" values="0.25;0.12;0.25" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Filter for soft glow -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="badgeShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <style>
+    .grid-line { stroke: #1e293b; stroke-width: 1; stroke-opacity: 0.35; }
+    .pulse-line {
+      stroke: url(#primaryGlow);
+      stroke-width: 2;
+      stroke-dasharray: 12, 180;
+      animation: dashMove 6s linear infinite;
+    }
+    .pulse-line-rev {
+      stroke: #34d399;
+      stroke-width: 1.5;
+      stroke-opacity: 0.7;
+      stroke-dasharray: 8, 140;
+      animation: dashMoveRev 7s linear infinite;
+    }
+    @keyframes dashMove {
+      from { stroke-dashoffset: 384; }
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes dashMoveRev {
+      from { stroke-dashoffset: 0; }
+      to { stroke-dashoffset: 296; }
+    }
+    .node-pulse {
+      animation: nodeBlink 3s ease-in-out infinite alternate;
+    }
+    @keyframes nodeBlink {
+      0% { r: 3.5; opacity: 0.4; }
+      100% { r: 6.5; opacity: 1; }
+    }
+    .banner-title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      letter-spacing: -0.5px;
+      fill: #ffffff;
+    }
+    .banner-subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 19px;
+      fill: #94a3b8;
+    }
+    .pill-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.4px;
+      fill: #e2e8f0;
+    }
+    .top-badge-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      fill: #38bdf8;
+    }
+  </style>
+
+  <!-- Layer 1: Solid Backdrop -->
+  <rect width="1200" height="420" rx="16" fill="url(#bgGradient)" />
+
+  <!-- Layer 2: Dynamic Atmospheric Glows -->
+  <rect width="1200" height="420" rx="16" fill="url(#radialCyan)" />
+  <rect width="1200" height="420" rx="16" fill="url(#radialPurple)" />
+
+  <!-- Layer 3: Tech Grid Matrix (Background) -->
+  <g>
+    <line x1="80" y1="0" x2="80" y2="420" class="grid-line" />
+    <line x1="200" y1="0" x2="200" y2="420" class="grid-line" />
+    <line x1="320" y1="0" x2="320" y2="420" class="grid-line" />
+    <line x1="880" y1="0" x2="880" y2="420" class="grid-line" />
+    <line x1="1000" y1="0" x2="1000" y2="420" class="grid-line" />
+    <line x1="1120" y1="0" x2="1120" y2="420" class="grid-line" />
+
+    <line x1="0" y1="70" x2="1200" y2="70" class="grid-line" />
+    <line x1="0" y1="190" x2="1200" y2="190" class="grid-line" />
+    <line x1="0" y1="310" x2="1200" y2="310" class="grid-line" />
+  </g>
+
+  <!-- Layer 4: Dynamic Connected Neural Circuits -->
+  <g>
+    <!-- Circuit 1 -->
+    <path d="M 40,80 L 180,80 L 260,160 L 400,160" fill="none" stroke="#334155" stroke-width="1.5" stroke-opacity="0.4" />
+    <path d="M 40,80 L 180,80 L 260,160 L 400,160" fill="none" class="pulse-line" />
+
+    <!-- Circuit 2 -->
+    <path d="M 800,260 L 920,260 L 1000,180 L 1160,180" fill="none" stroke="#334155" stroke-width="1.5" stroke-opacity="0.4" />
+    <path d="M 800,260 L 920,260 L 1000,180 L 1160,180" fill="none" class="pulse-line" />
+
+    <!-- Circuit 3 (Reverse Flow) -->
+    <path d="M 1160,320 L 1040,320 L 960,370 L 820,370" fill="none" stroke="#334155" stroke-width="1.5" stroke-opacity="0.4" />
+    <path d="M 1160,320 L 1040,320 L 960,370 L 820,370" fill="none" class="pulse-line-rev" />
+
+    <!-- Circuit 4 (Corner Flow) -->
+    <path d="M 60,350 L 160,350 L 220,290 L 320,290" fill="none" stroke="#334155" stroke-width="1.5" stroke-opacity="0.4" />
+    <path d="M 60,350 L 160,350 L 220,290 L 320,290" fill="none" class="pulse-line-rev" />
+
+    <!-- Pulsing Node Dots -->
+    <circle cx="180" cy="80" r="5" fill="#38bdf8" class="node-pulse" filter="url(#softGlow)" />
+    <circle cx="260" cy="160" r="4" fill="#a855f7" class="node-pulse" />
+    <circle cx="920" cy="260" r="4.5" fill="#34d399" class="node-pulse" />
+    <circle cx="1000" cy="180" r="5" fill="#38bdf8" class="node-pulse" filter="url(#softGlow)" />
+    <circle cx="960" cy="370" r="4" fill="#818cf8" class="node-pulse" />
+    <circle cx="160" cy="350" r="4.5" fill="#06b6d4" class="node-pulse" />
+  </g>
+
+  <!-- Layer 5: Foreground Backdrop Protective Card (prevents elements from obscuring text) -->
+  <rect x="130" y="55" width="940" height="310" rx="20" fill="#0b1120" fill-opacity="0.78" stroke="#1e293b" stroke-width="1.5" filter="url(#badgeShadow)" />
+
+  <!-- Layer 6: Foreground Content -->
+  <!-- Top Pill -->
+  <g transform="translate(600, 100)">
+    <rect x="-180" y="-16" width="360" height="32" rx="16" fill="#0f172a" stroke="#0284c7" stroke-width="1" />
+    <circle cx="-155" cy="0" r="4" fill="#38bdf8" class="node-pulse" />
+    <text x="-140" y="4" class="top-badge-text">ON-DEVICE &amp; EDGE AI INFERENCE</text>
+  </g>
+
+  <!-- Title -->
+  <!-- Subtle Gradient Accent on "Awesome" & "Inference" -->
+  <text x="600" y="175" text-anchor="middle" class="banner-title">
+    Awesome Edge &amp; Local AI
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="215" text-anchor="middle" class="banner-subtitle">
+    Curated Ecosystem for On-Device LLMs, NPU Acceleration &amp; Sovereign AI Runtimes
+  </text>
+
+  <!-- Feature Tags / Pills in Foreground -->
+  <g transform="translate(600, 290)">
+    <!-- Pill 1: Privacy -->
+    <g transform="translate(-360, 0)">
+      <rect x="0" y="0" width="165" height="36" rx="18" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="82" y="22" text-anchor="middle" class="pill-text">🔒 100% Sovereign</text>
+    </g>
+
+    <!-- Pill 2: Zero Cloud -->
+    <g transform="translate(-175, 0)">
+      <rect x="0" y="0" width="165" height="36" rx="18" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="82" y="22" text-anchor="middle" class="pill-text">⚡ Zero Cloud Latency</text>
+    </g>
+
+    <!-- Pill 3: Quantized Runtimes -->
+    <g transform="translate(10, 0)">
+      <rect x="0" y="0" width="170" height="36" rx="18" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="85" y="22" text-anchor="middle" class="pill-text">🧠 GGUF • EXL2 • AWQ</text>
+    </g>
+
+    <!-- Pill 4: Hardware Agnostic -->
+    <g transform="translate(200, 0)">
+      <rect x="0" y="0" width="160" height="36" rx="18" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="80" y="22" text-anchor="middle" class="pill-text">💻 GPU • NPU • Apple M</text>
+    </g>
+  </g>
+
+  <!-- Outer Border Frame -->
+  <rect x="1" y="1" width="1198" height="418" rx="15" fill="none" stroke="#334155" stroke-width="1.5" stroke-opacity="0.6" />
+</svg>
