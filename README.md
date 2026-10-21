@@ -42,35 +42,14 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## SaaS/Hosted Platforms
 
-
-
-- **[Ollama (Cloud Tier)](https://ollama.com/)**  
-
-  Primarily open-source local runtime, but offers an optional cloud tier for running models too large for local hardware. The desktop app (v0.10.0+) provides GUI access for macOS and Windows, while the core CLI remains the primary developer interface .
-
-
-
-- **[LM Studio](https://lmstudio.ai/)**  
-
-  Free desktop application (not fully open-source) for discovering, downloading, and running local LLMs via a polished GUI. Runs an OpenAI-compatible server while the app is open. Best-in-class in-app model catalog with hardware compatibility checks .
-
-
-
-- **[Jan.ai](https://jan.ai/)**  
-
-  Open-source desktop chat assistant with a privacy-first design. Provides a GUI for local inference via llama.cpp, with optional connections to hosted models (OpenAI, Anthropic). Includes a local Cortex server with OpenAI-compatible endpoints and MCP support .
-
-
-
-- **[Edge Impulse (Enterprise)](https://www.edgeimpulse.com/)**  
-
-  Commercial edge ML platform for building and deploying TinyML models to microcontrollers and edge devices. The Developer Plan is now free, including GPU training, advanced models (FOMO, YOLO-Pro), and production licensing . Enterprise adds dataset management, cloud integrations, and dedicated support.
-
-
-
-- **[Google MediaPipe (Solutions/Tasks)](https://developers.google.com/mediapipe)**  
-
-  Google's on-device ML framework for vision, text, and audio pipelines. While the framework is open-source, the primary development and documentation have moved to Google's platform with pre-built Tasks APIs for Android, iOS, Web, and Python .
+| Platform | Company / Backer | Valuation / Revenue | Pricing (Starting Tier) | Free Tier Limits | Key Edge / Local Features |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **[Google MediaPipe](https://developers.google.com/mediapipe)** | Alphabet Inc. (Google) | **$2.14T Valuation** / $350B+ Revenue | **$0** (Client SDKs free; Cloud endpoints start at $0.0001/1K chars) | **Forever free** on-device SDK with unlimited local client execution; 90-day $300 credit trial for Google Cloud APIs | Pre-built vision & audio task pipelines (Hand landmarks, Pose, Face mesh, Object detection) optimized for mobile and web |
+| **[Edge Impulse](https://www.edgeimpulse.com/)** | Qualcomm | **$195B Parent MCap** ($234M Series B) / $15M ARR | **$39/month** (Pro seat / Enterprise fleet from $500/mo) | **Forever free** Developer Plan with 60 min compute time per training job, 3 private projects, GPU acceleration, and commercial license | TinyML & edge ML development studio, FOMO/YOLO-Pro model optimization, direct firmware deployment for MCUs and NPUs |
+| **[Ollama (Cloud Tier)](https://ollama.com/)** | Ollama Inc. (Benchmark / Theory) | **~$600M Valuation** ($88M raised) / ~$15M ARR | **$20/month** (Ollama Cloud Pro with $60 monthly token credits; Max $100/mo) | **Forever free** local CLI runtime with unlimited on-device inference; Cloud tier offers free tier with 1 concurrent request | Zero-config local LLM runner (`localhost:11434`), hybrid cloud fallback, cross-platform GGUF quantization, and OpenAI API compatibility |
+| **[Roboflow](https://roboflow.com/)** | Roboflow (Craft / YC) | **$200M Valuation** ($64M raised) / ~$12M ARR | **$79/month** (Core plan with dedicated team credits) | **Forever free** starter tier with 10 monthly credits (~30 cloud trainings, ~10,000 auto-labeled images, or ~80k inferences) and local export | Vision AI dataset management, edge model deployment via Roboflow Inference container, auto-labeling, and active learning |
+| **[LM Studio](https://lmstudio.ai/)** | Element Labs (Google / Conviction) | **~$80M Valuation** ($19.3M raised) / ~$1.8M ARR | **$20/month** (Bionic+ tier; Pro at $100/mo) | **Forever free** desktop app for personal & commercial use with unlimited local inference; Bionic free tier for agent sync | Polished desktop UI, hardware compatibility calculator, local OpenAI-compatible server, in-app Hugging Face model discovery |
+| **[Jan.ai](https://jan.ai/)** | Menlo Research | **~$5M Valuation** / ~$1.2M ARR | **$24 one-time** (Offline dictation add-on; BYO API keys for hosted models) | **Forever free** open-source local desktop runtime (Apache 2.0 / AGPL-3.0) with unlimited offline inferences | Privacy-first local assistant, local Cortex engine with OpenAI-compatible endpoints, MCP server support, and local RAG |
 
 
 
